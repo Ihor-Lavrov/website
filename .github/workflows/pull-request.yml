@@ -1,0 +1,14 @@
+name: Pull request workflow
+run-name: ${{ github.actor }} is running PR 🚀
+on: pull_request
+  types: [opened, syncronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install dependencies
+        run: npm install
+
+      - name: run lint
+        run: npm run lint-staged
