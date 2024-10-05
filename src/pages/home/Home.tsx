@@ -1,10 +1,13 @@
-import { Outlet } from 'react-router-dom';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 
 export const HomePage = () => {
   return (
-    <div>
-      Home Page
-      <Outlet />
-    </div>
+    <Box>
+      <Flex gap={4}>
+        <Text variant='italic'>hey, I'm</Text>
+        <Heading>Ihor Lavrov</Heading>
+      </Flex>
+      <Heading>Software Engineer</Heading>
+    </Box>
   );
 };
