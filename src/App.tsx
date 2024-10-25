@@ -1,13 +1,20 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import { RouterProvider } from 'react-router-dom';
 import './App.css';
+import { BasicPage } from './components';
 import { router } from './routes/root';
+import customTheme from './theme/theme';
 
-function App() {
+export const App = () => {
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <ChakraProvider theme={customTheme}>
+        <BasicPage>
+          <RouterProvider router={router}></RouterProvider>
+        </BasicPage>
+      </ChakraProvider>
     </>
   );
-}
+};
 
 export default App;
