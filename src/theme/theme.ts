@@ -1,7 +1,8 @@
 import { extendTheme, ThemeConfig } from '@chakra-ui/react';
 import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 import { mode } from '@chakra-ui/theme-tools';
-import { textStyles } from './components';
+import { headingStyles, tagStyles, textStyles } from './components';
+import { typography } from './typography';
 
 const config: ThemeConfig = {
   initialColorMode: 'light',
@@ -15,16 +16,20 @@ const customTheme = {
       bg: 'red.500'
     }
   },
+  ...typography,
+
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
-        color: mode('blue.800', 'black.800')(props),
+        color: mode('white', 'black')(props),
         bg: mode('black', 'white')(props)
       }
     })
   },
   components: {
-    Text: textStyles
+    Text: textStyles,
+    Heading: headingStyles,
+    Tag: tagStyles
   }
 };
 

@@ -2,12 +2,11 @@ import { ComponentStyleConfig } from '@chakra-ui/react';
 
 export const textStyles: ComponentStyleConfig = {
   baseStyle: {
-    fontSize: '64px'
+    fontSize: '1rem'
   },
   variants: {
     italic: {
-      color: 'purple',
-      fontSize: '32px',
+      fontSize: '36px',
       fontStyle: 'italic'
     }
   }
