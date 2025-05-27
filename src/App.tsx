@@ -323,7 +323,7 @@ function App() {
                 </div>
                 <div className="contact-method">
                   <span className="contact-icon">📍</span>
-                  <span>San Francisco, CA</span>
+                  <span>Toronto, ON</span>
                 </div>
               </div>
             </div>
