@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
+  // Navigate to contact page
+  const goToContact = () => {
+    navigate("/contact");
+  };
+
   return (
     <section id="home" className="hero">
       <div className="container">
@@ -16,7 +24,7 @@ const Home: React.FC = () => {
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary">View My Work</button>
-            <button className="btn btn-secondary">Get In Touch</button>
+            <button className="btn btn-secondary" onClick={goToContact}>Get In Touch</button>
           </div>
         </div>
         <div className="hero-image">
