@@ -56,6 +56,18 @@ function App() {
     }
   };
 
+  // Smooth scroll to contact section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: "smooth",
+        block: "start"
+      });
+      setActiveSection("contact");
+    }
+  };
+
   return (
     <div className="App">
       {/* Header */}
@@ -131,7 +143,7 @@ function App() {
             </p>
             <div className="hero-buttons">
               <button className="btn btn-primary">View My Work</button>
-              <button className="btn btn-secondary">Get In Touch</button>
+              <button className="btn btn-secondary" onClick={scrollToContact}>Get In Touch</button>
             </div>
           </div>
           <div className="hero-image">
